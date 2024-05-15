@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 2024-05-15
+
 ### Added
 
 - Initial Thunderstore release.
+
+[unreleased]: https://github.com/SGG-Modding/SeerSuite/compare/1.0.0...HEAD
+[1.0.0]: https://github.com/SGG-Modding/SeerSuite/compare/78b7f8e4b37e9c9f38dece6bc06c8a6858e30aa5...1.0.0
