@@ -432,7 +432,7 @@ do
 	local function peval(text)
 		local func = load("return " .. text)
 		if not func then return nil end
-		setfenv(func,_G)
+		envy.setfenv(func,_G)
 		local ret = table.pack(pcall(func))
 		if ret.n <= 1 then return end
 		if not ret[1] then return end
