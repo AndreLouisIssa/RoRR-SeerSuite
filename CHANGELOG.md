@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Changed Object Browser so it now lists keys in alphabetic order.
+
 ## [1.0.1] - 2024-05-16
 
 ### Fixed
