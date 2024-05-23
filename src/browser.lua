@@ -314,7 +314,7 @@ do
 			for k in iter(data) do
 				table.insert(order,k)
 			end
-			table.sort(order)
+			table.sort(order, function(a,b) return tostring(a) < tostring(b) end)
 			for _,k in ipairs(order) do
 				local v = data[k]
 				for _,sd in public.vararg(entrify(k,v,ed)) do
@@ -432,7 +432,7 @@ do
 	local function peval(text)
 		local func = load("return " .. text)
 		if not func then return nil end
-		setfenv(func,_G)
+		envy.setfenv(func,_G)
 		local ret = table.pack(pcall(func))
 		if ret.n <= 1 then return end
 		if not ret[1] then return end

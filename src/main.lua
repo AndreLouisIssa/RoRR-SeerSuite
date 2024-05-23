@@ -5,6 +5,7 @@
 local envy = rom.mods["SGG_Modding-ENVY"]
 ---@module 'SGG_Modding-ENVY-auto'
 envy.auto()
+private.envy = envy
 
 import('core.lua')
 import('browser.lua',nil,envy.globals)
