@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.3] - 2024-05-23
+
+### Changed
+
+- Fixed typo that prevented modifying objects via the Object Browser
+- Fixed crash while sorting mixed content tables in Object Browser
+
 ## [1.0.2] - 2024-05-23
 
 ### Changed

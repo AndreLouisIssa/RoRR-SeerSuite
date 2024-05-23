@@ -314,7 +314,7 @@ do
 			for k in iter(data) do
 				table.insert(order,k)
 			end
-			table.sort(order)
+			table.sort(order, function(a,b) return tostring(a) < tostring(b) end)
 			for _,k in ipairs(order) do
 				local v = data[k]
 				for _,sd in public.vararg(entrify(k,v,ed)) do
