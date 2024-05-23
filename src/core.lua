@@ -128,7 +128,7 @@ local function endow_with_pairs_and_next(meta)
 			function _next(s,k)
 				local v,u,w
 				while v == nil do
-					k,u = rawnext(meta,k)
+					k,u = next(meta,k)
 					if k == nil then return nil end
 					-- ignore 'new' and metatable fields
 					if k ~= 'new' and k:sub(1,2) ~= '__' then
@@ -148,7 +148,7 @@ local function endow_with_pairs_and_next(meta)
 		end)
 	end
 	-- __next is implemented by a custom implementation of next
-	local status = false--pcall(rawnext,object)
+	local status = false--pcall(next,object)
 	if not status and _next ~= nil and rawget(meta,'__next') == nil then
 		rawset(meta,'__next',_next)
 	end

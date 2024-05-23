@@ -310,7 +310,13 @@ do
 		local iter = ed.iter
 		local entries = {}
 		if iter ~= nil and data ~= nil then
-			for k,v in iter(data) do
+			local order = {}
+			for k in iter(data) do
+				table.insert(order,k)
+			end
+			table.sort(order)
+			for _,k in ipairs(order) do
+				local v = data[k]
 				for _,sd in public.vararg(entrify(k,v,ed)) do
 					if sd ~= nil then
 						table.insert(entries,sd)
