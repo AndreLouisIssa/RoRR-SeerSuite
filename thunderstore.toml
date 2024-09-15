@@ -2,16 +2,16 @@
 schemaVersion = "0.0.1"
 
 [package]
-namespace = "SGG_Modding"
+namespace = "MGReturns"
 name = "SeerSuite"
 versionNumber = "1.0.3"
 description = "Defines debug tools such as an Object Browser and Script Console."
-websiteUrl = "https://github.com/SGG-Modding/SeerSuite"
+websiteUrl = "https://github.com/AndreLouisIssa/RoRR-SeerSuite"
 containsNsfwContent = false
 
 [package.dependencies]
-Hell2Modding-Hell2Modding = "1.0.22"
-SGG_Modding-ENVY = "1.0.0"
+ReturnOfModding-ReturnOfModding = "1.0.38"
+MGReturns-ENVY = "1.1.0"
 
 [build]
 icon = "./icon.png"
@@ -33,7 +33,7 @@ target = "./"
 
 [publish]
 repository = "https://thunderstore.io"
-communities = [ "hades-ii", ]
+communities = [ "risk-of-rain-returns", ]
 
 [publish.categories]
 hades-ii = [ "libraries", "mods" ]
