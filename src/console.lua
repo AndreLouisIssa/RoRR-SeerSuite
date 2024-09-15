@@ -658,7 +658,7 @@ local function imgui_on_render()
 							run_console_command(md,"exec " .. name)
 						else
 							local status, file = pcall(io.open,tpath,'w')
-							if status then file.close() end
+							if status then file:close() end
 						end
 					end
 					rom.ImGui.PushStyleColor(rom.ImGuiCol.FrameBg, 0)

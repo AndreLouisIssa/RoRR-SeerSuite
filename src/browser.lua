@@ -14,7 +14,6 @@ local colors = {
 
 ob.root = {
 	lua = ...,
-	game = rom.game,
 	colors = colors,
 	helpers = {},
 }
