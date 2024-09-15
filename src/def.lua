@@ -1,18 +1,18 @@
----@meta SGG_Modding-SeerSuite
+---@meta MGReturns-SeerSuite
 local suite = {}
 
----@alias SGG_Modding-SeerSuite*-nil boolean|string|number|integer|function|table|thread|userdata|lightuserdata
+---@alias MGReturns-SeerSuite*-nil boolean|string|number|integer|function|table|thread|userdata|lightuserdata
 
 suite.browser = {}
 
----@class SGG_Modding-SeerSuite*browser.root
----@field public lua SGG_Modding-SeerSuite*lua
----@field public game SGG_Modding-SeerSuite*game
----@field public colors SGG_Modding-SeerSuite*browser.colors
+---@class MGReturns-SeerSuite*browser.root
+---@field public lua MGReturns-SeerSuite*lua
+---@field public game MGReturns-SeerSuite*game
+---@field public colors MGReturns-SeerSuite*browser.colors
 ---@field public helpers table<string,function>
----@field public style SGG_Modding-SeerSuite*style?
+---@field public style MGReturns-SeerSuite*style?
 
----@class SGG_Modding-SeerSuite*browser.colors
+---@class MGReturns-SeerSuite*browser.colors
 ---@field public tree number
 ---@field public leaf number
 ---@field public info number
@@ -20,11 +20,11 @@ suite.browser = {}
 ---@field public null number
 
 ---TODO: get these from other definition files
----@alias SGG_Modding-SeerSuite*lua table
----@alias SGG_Modding-SeerSuite*game table
----@alias SGG_Modding-SeerSuite*style table
+---@alias MGReturns-SeerSuite*lua table
+---@alias MGReturns-SeerSuite*game table
+---@alias MGReturns-SeerSuite*style table
 
----@type SGG_Modding-SeerSuite*browser.root
+---@type MGReturns-SeerSuite*browser.root
 suite.browser.root = {
 	lua = ...,
 	game = ...,
@@ -40,22 +40,22 @@ suite.browser.root = {
 
 suite.console = {}
 
----@class SGG_Modding-SeerSuite*console.logger
----@field public log fun(md: SGG_Modding-SeerSuite*console.mode, raw: table<integer,string>, ...)
+---@class MGReturns-SeerSuite*console.logger
+---@field public log fun(md: MGReturns-SeerSuite*console.mode, raw: table<integer,string>, ...)
 ---@field public logger fun(...)?
 ---@field public color integer
----@field public prefix SGG_Modding-SeerSuite*console.log.prefix
+---@field public prefix MGReturns-SeerSuite*console.log.prefix
 
----@class SGG_Modding-SeerSuite*console.log.prefix
+---@class MGReturns-SeerSuite*console.log.prefix
 ---@field public debug string
 ---@field public shown string
 
----@alias SGG_Modding-SeerSuite*console.command fun(md: SGG_Modding-SeerSuite*console.mode, ...: string)
+---@alias MGReturns-SeerSuite*console.command fun(md: MGReturns-SeerSuite*console.mode, ...: string)
 
----@alias SGG_Modding-SeerSuite*console.color ...
----@alias SGG_Modding-SeerSuite*console.on_enter ...
+---@alias MGReturns-SeerSuite*console.color ...
+---@alias MGReturns-SeerSuite*console.on_enter ...
 
----@class SGG_Modding-SeerSuite*console.definitions
+---@class MGReturns-SeerSuite*console.definitions
 ---@field public help fun(...)
 ---@field public print fun(...)
 ---@field public tprint fun(...)
@@ -64,7 +64,7 @@ suite.console = {}
 ---@field public imprint fun(map: (fun(a: any): b: any), ...)
 ---@field public eval fun(...): success: boolean, ...
 
----@class SGG_Modding-SeerSuite*console.mode
+---@class MGReturns-SeerSuite*console.mode
 ---@field public current_text string
 ---@field public enter_pressed boolean
 ---@field public history_offset integer
@@ -73,15 +73,15 @@ suite.console = {}
 ---@field public raw table<integer,string>
 ---@field public selected table<integer,string>
 ---@field public selected_last integer?
----@field public colors table<integer,SGG_Modding-SeerSuite*console.color>
+---@field public colors table<integer,MGReturns-SeerSuite*console.color>
 ---@field public index integer
----@field public on_enter SGG_Modding-SeerSuite*console.on_enter
----@field public definitions SGG_Modding-SeerSuite*console.definitions
+---@field public on_enter MGReturns-SeerSuite*console.on_enter
+---@field public definitions MGReturns-SeerSuite*console.definitions
 
----@type SGG_Modding-SeerSuite*console.mode
+---@type MGReturns-SeerSuite*console.mode
 suite.console.mode = ...
 
----@generic K: SGG_Modding-SeerSuite*-nil
+---@generic K: MGReturns-SeerSuite*-nil
 ---@generic V: any
 ---@param table table<K,V>
 ---@param value V
@@ -97,13 +97,13 @@ function suite.perform_lookup(table,value,map) end
 function suite.perform_index(array,value,map) end
 
 ---@generic K: any
----@generic V: SGG_Modding-SeerSuite*-nil
+---@generic V: MGReturns-SeerSuite*-nil
 ---@param table table<K,V>
 ---@param map? fun(value: V): V
 ---@return table<V,K>
 function suite.build_lookup(table,map) end
 
----@generic V: SGG_Modding-SeerSuite*-nil
+---@generic V: MGReturns-SeerSuite*-nil
 ---@param array V[]
 ---@param map? fun(value: V): V
 ---@return table<V,integer>
@@ -115,7 +115,7 @@ function suite.clear(...) end
 ---@param ... any[]
 function suite.iclear(...) end
 
----@generic K: SGG_Modding-SeerSuite*-nil
+---@generic K: MGReturns-SeerSuite*-nil
 ---@generic V: any
 ---@param target table<K,V>
 ---@param ... table<K,V>
@@ -137,7 +137,7 @@ function suite.type(value) end
 function suite.browser.root.helpers.int_to_hex(color) end 
 
 suite.console.log = {
-    ---@type SGG_Modding-SeerSuite*console.logger
+    ---@type MGReturns-SeerSuite*console.logger
 	error = {
         log = ...,
 		prefix = {
@@ -146,7 +146,7 @@ suite.console.log = {
 		},
 		color = 0xFF2020EE,
 	},
-    ---@type SGG_Modding-SeerSuite*console.logger
+    ---@type MGReturns-SeerSuite*console.logger
 	info = {
         log = ...,
 		prefix = {
@@ -155,7 +155,7 @@ suite.console.log = {
 		},
 		color = 0xFFEEEEEE,
 	},
-    ---@type SGG_Modding-SeerSuite*console.logger
+    ---@type MGReturns-SeerSuite*console.logger
 	warning = {
         log = ...,
 		prefix = {
@@ -164,7 +164,7 @@ suite.console.log = {
 		},
 		color = 0xFF20EEEE,
 	},
-    ---@type SGG_Modding-SeerSuite*console.logger
+    ---@type MGReturns-SeerSuite*console.logger
 	history = {
         log = ...,
 		prefix = {
@@ -173,7 +173,7 @@ suite.console.log = {
 		},
 		color = 0xEECCCCCC,
 	},
-    ---@type SGG_Modding-SeerSuite*console.logger
+    ---@type MGReturns-SeerSuite*console.logger
 	echo = {
         log = ...,
 		prefix = {
@@ -182,7 +182,7 @@ suite.console.log = {
 		},
 		color = 0xFFEEEEEE,
 	},
-    ---@type SGG_Modding-SeerSuite*console.logger
+    ---@type MGReturns-SeerSuite*console.logger
 	print = {
         log = ...,
 		prefix = {
@@ -191,7 +191,7 @@ suite.console.log = {
 		},
 		color = 0xFFEEEEEE,
 	},
-    ---@type SGG_Modding-SeerSuite*console.logger
+    ---@type MGReturns-SeerSuite*console.logger
 	returns = {
         log = ...,
 		prefix = {
@@ -200,7 +200,7 @@ suite.console.log = {
 		},
 		color = 0xFFFFFF20,
 	},
-    ---@type SGG_Modding-SeerSuite*console.logger
+    ---@type MGReturns-SeerSuite*console.logger
 	perror = {
         log = ...,
 		prefix = {
@@ -215,27 +215,27 @@ suite.console.aliases = {}
 suite.console.binds = {}
 suite.console.ibinds = {}
 
----@type table<string,SGG_Modding-SeerSuite*console.command>
+---@type table<string,MGReturns-SeerSuite*console.command>
 suite.console.commands = {}
 
 --[[
             Lists the available commands.
 ]]
----@param md SGG_Modding-SeerSuite*console.mode
+---@param md MGReturns-SeerSuite*console.mode
 ---@param stub string
 suite.console.commands.help = function(md,stub) end
 
 --[[
             Prints a message to the console.
 --]]
----@param md SGG_Modding-SeerSuite*console.mode
+---@param md MGReturns-SeerSuite*console.mode
 ---@param ... string
 suite.console.commands.echo = function(md,...) end
 
 --[[
             Executes lua code and shows the result.
 --]]
----@param md SGG_Modding-SeerSuite*console.mode
+---@param md MGReturns-SeerSuite*console.mode
 ---@param ... string
 ---@return any ...
 suite.console.commands.lua = function(md,...) end
@@ -243,7 +243,7 @@ suite.console.commands.lua = function(md,...) end
 --[[
             Executes lua file with args and shows the result.
 --]]
----@param md SGG_Modding-SeerSuite*console.mode
+---@param md MGReturns-SeerSuite*console.mode
 ---@param ... string
 ---@return any ...
 suite.console.commands.luae = function(md,path,...) end
@@ -251,14 +251,14 @@ suite.console.commands.luae = function(md,path,...) end
 --[[
             Executes a file containing a list of console commands.
 --]]
----@param md SGG_Modding-SeerSuite*console.mode
+---@param md MGReturns-SeerSuite*console.mode
 ---@param path string
 suite.console.commands.exec = function(md,path) end
 
 --[[
             Defines a command that represents multiple commands.
 --]]
----@param md SGG_Modding-SeerSuite*console.mode
+---@param md MGReturns-SeerSuite*console.mode
 ---@param name string
 ---@param ... string
 suite.console.commands.alias = function(md,name,...) end
@@ -266,14 +266,14 @@ suite.console.commands.alias = function(md,name,...) end
 --[[
             Binds a key combination to run commands during gameplay.
 --]]
----@param md SGG_Modding-SeerSuite*console.mode
+---@param md MGReturns-SeerSuite*console.mode
 ---@param ... string
 suite.console.commands.bind = function(md,name,...) end
 
 --[[
             Binds a key combination to run commands on the mod gui.
 --]]
----@param md SGG_Modding-SeerSuite*console.mode
+---@param md MGReturns-SeerSuite*console.mode
 ---@param ... string
 suite.console.commands.ibind = function(md,name,...) end
 
