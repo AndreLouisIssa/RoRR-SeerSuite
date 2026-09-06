@@ -10,8 +10,8 @@ websiteUrl = "https://github.com/AndreLouisIssa/RoRR-SeerSuite"
 containsNsfwContent = false
 
 [package.dependencies]
-ReturnOfModding-ReturnOfModding = "1.0.38"
-MGReturns-ENVY = "1.1.0"
+ReturnOfModding-ReturnOfModding = "1.1.30"
+MGReturns-ENVY = "1.2.1"
 
 [build]
 icon = "./icon.png"
