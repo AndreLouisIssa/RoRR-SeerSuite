@@ -7,7 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Changed icon to a simpler one.
+
 ## [1.0.3] - 2024-09-15
+
+### Changed
+
+- Ported to Risk of Rain Returns (causing this overlapping release version)
 
 ## [1.0.3] - 2024-05-23
 
@@ -35,7 +43,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial Thunderstore release.
 
 [unreleased]: https://github.com/AndreLouisIssa/RoRR-SeerSuite/compare/1.0.3...HEAD
-[1.0.3]: https://github.com/AndreLouisIssa/RoRR-SeerSuite/compare/1.0.3...1.0.3
 [1.0.3]: https://github.com/SGG-Modding/SeerSuite/compare/1.0.2...1.0.3
 [1.0.2]: https://github.com/SGG-Modding/SeerSuite/compare/1.0.1...1.0.2
 [1.0.1]: https://github.com/SGG-Modding/SeerSuite/compare/1.0.0...1.0.1
